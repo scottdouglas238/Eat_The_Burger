@@ -1,4 +1,4 @@
-<div class = "container text-center">
+<div class = "text-center container">
  <div class = "row">
 <img src = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-burgers-across-the-country-new-jersey-left-bank-burger-bar-1573665543.jpg">
  </div>
@@ -11,7 +11,7 @@
   {{#each burgers}}
     <li>
       <p>
-        {{this.id}}. {{this.burger}}
+        {{this.id}}. {{this.burger_name}}
         <button data-burgerid="{{this.id}}" class="eatBurger">Eat it!</button>
       </p>
     </li>
@@ -23,7 +23,7 @@
   {{#each burgers}}
     <li>
       <p>
-        {{this.id}}. {{this.burger}}
+        {{this.id}}. {{this.burger_name}}
         <button data-burgerid="{{this.id}}" class="delBurger">Digest it!</button>
       </p>
     </li>
@@ -34,9 +34,9 @@
  <div class = "row">
   <form>
     <div class="form-group">
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="text" class="form-control" id="burgerInput" aria-describedby="emailHelp">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" id = "submitBurger" class="generic btn-primary">Submit</button>
   </form>
  </div>
  <div>
