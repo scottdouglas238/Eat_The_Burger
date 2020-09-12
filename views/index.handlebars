@@ -7,19 +7,23 @@
  </div>
  <div class = "row">
   <div class = "col-6-md">
+    <div class = "row">
    <ul>
 {{#each burgers}}
     {{#unless devoured}}
       {{> burgers/burger-block devoure=true}}
+      <button class="eatBurger btn-dark" data-burgerid="{{this.id}}">Eat it!</button>
     {{/unless}}
   {{/each}}
 </ul>
+   </div>
   </div>
   <div class = "col-6-md">
 <ul>
   {{#each burgers}}
     {{#if devoured}}
       {{> burgers/burger-block devoure=false}}
+      <button class="digestBurger btn-dark" data-burgerid="{{this.id}}">Digest it!</button>
     {{/if}}
   {{/each}}
 </ul>

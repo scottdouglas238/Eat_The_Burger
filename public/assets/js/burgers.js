@@ -34,7 +34,7 @@ $(function(){
     $(".digestBurger").on("click", function(e){
         e.preventDefault();
         let id = $(this).data("burgerid");
-        
+
         $.ajax("/api/burgers/" + id, {
             type: "DELETE"
         }).then(function(){
