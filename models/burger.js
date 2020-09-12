@@ -11,11 +11,21 @@ const burger = {
             cb(res)
         });
     },
-    updateOne: function(tableInput, colOne, valOne, colToSearch, valOfCol, cb){
-        orm.updateOne("burgers", tableInput, colOne, valOne, colToSearch, valOfCol, function(res){
-            cb(res)
+    updateOne: function(objColVals, condition, cb) {
+        orm.updateOne("burgers", objColVals, condition, function(res) {
+          cb(res);
         });
-    }
+      },
+    delete: function(column, value, cb){
+        orm.delete("burgers", column, value, function(res){
+            cb(res);
+        })
+    },  
+    // updateOne: function(colOne, valOne, colToSearch, valOfCol, cb){
+    //     orm.updateOne("burgers", colOne, valOne, colToSearch, valOfCol, function(res){
+    //         cb(res)
+    //     });
+    // }
 };
 
 // //This will display all burgers
