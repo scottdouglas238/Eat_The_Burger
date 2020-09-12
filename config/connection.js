@@ -5,7 +5,7 @@ const connection = mysql.createConnection({
     port: 3306,
     user: "root",
     password: "",
-    database: "burger"
+    database: "heroku_af2b417cdb51a32"
   });
 
   connection.connect(function(err) {
