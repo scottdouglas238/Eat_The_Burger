@@ -10,6 +10,7 @@ $(function(){
         }).then(
             function(response){
                 console.log(response)
+                console.log("^this response, Hello there!")
                 location.reload();
             }
         )
